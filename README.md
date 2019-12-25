@@ -7,8 +7,17 @@ Header 是 ObjC 前置處理程式的重要功能之一。
 
 重要指令
 
-                # import <檔案名稱>
+                #import <檔案名稱>
 
 也可以用雙引號
 
                 #import "檔案名稱"
+
+關係示意圖
+
+
+      fileA.c             fileB.c                 a src
+                   +                   = 
+        a src               b src                 b src
+        
+        
