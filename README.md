@@ -16,7 +16,7 @@ Header 是 ObjC 前置處理程式的重要功能之一。
 關係示意圖
 
 
-      fileA.c             fileB.c                 a src
+      fileA.c             fileB.c               #import <fileA.c>
                    +                   = 
         a src               b src                 b src
         
