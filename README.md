@@ -23,6 +23,7 @@ Header 是 ObjC 前置處理程式的重要功能之一。
 實際範例
 
 QQQ.h 
+
 標頭檔案是一個檔案名稱
 
               #import <Foundation/Foundation.h>
@@ -39,9 +40,18 @@ QQQ.h
               @end
 
 QQQ.m
+
 在別的檔案中注入此標頭
+
 實施他類別的方法
+
 並實作他的方法
+
+如無此檔包含
+
+黨包含 目的是進行具現化物件
+
+則編譯時會出現錯誤訊息替史
      
              #import"QQQ.h"
              
