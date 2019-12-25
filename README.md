@@ -20,4 +20,61 @@ Header 是 ObjC 前置處理程式的重要功能之一。
                    +                   = 
         a src               b src                 b src
         
-        
+實際範例
+
+QQQ.h 
+標頭檔案是一個檔案名稱
+
+              #import <Foundation/Foundation.h>
+              
+              @inerface QQQ: NSobject
+              {
+              
+                 int q;
+              
+              }
+              -(void)setQ;
+              -(void)printQ;
+              
+              @end
+
+QQQ.m
+在別的檔案中注入此標頭
+實施他類別的方法
+並實作他的方法
+     
+             #import"QQQ.h"
+             
+             @implementation QQQ
+             -(void)setQ
+             {
+                q=99;
+             }
+             
+             -(void)printQ
+             {
+                NSlog(//...,q);
+             }
+             
+             @end
+             
+main.m
+在別的源代碼中注入此標頭
+並且引用其方法
+
+              #import<Foundation/Foundation.h>
+              #import"QQQ.h"
+              
+              int main(int argc, const char * argv[])
+              {
+              
+                @autoreleasepool{
+                
+                  QQQ *b=[[QQQ alloc]init];
+                  [b setQ];
+                  [b printQ];
+                
+                }
+               
+                return0;
+              }
